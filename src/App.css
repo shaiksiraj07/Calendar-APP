@@ -1,0 +1,78 @@
+body {
+  width: max-width;
+  margin: 0 auto;
+  text-align: center;
+  box-sizing: border-box;
+  margin: 0;
+  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+  line-height: 1.5;
+  font-weight: 400;
+  scroll-behavior: smooth;
+  height: 100vh;
+  overflow: hidden;
+  user-select: none;
+
+  /* Brighter animated gradient background */
+  background: linear-gradient(-45deg, #ff9a9e, #fad0c4, #fbc2eb, #a6c1ee);
+  background-size: 400% 400%;
+  animation: gradientBG 12s ease infinite;
+  color: #1e1e2f;
+}
+
+@keyframes gradientBG {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+.monthCalender {
+  max-height: calc(100vh - 70px);
+  background: rgba(255, 255, 255, 0.75);
+  backdrop-filter: blur(12px);
+  border-radius: 16px;
+  padding: 14px;
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+  transition: transform 0.3s ease;
+}
+
+.monthCalender:hover {
+  transform: scale(1.01);
+}
+
+.DayBox {
+  background: linear-gradient(135deg, #ffffff 0%, #ffe6f7 100%);
+  border-radius: 12px;
+  box-shadow: 0 4px 10px rgba(255, 105, 180, 0.2);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.DayBox:hover {
+  background: linear-gradient(135deg, #ffecd2 0%, #fcb69f 100%);
+  transform: scale(1.05);
+  box-shadow: 0 6px 20px rgba(255, 105, 180, 0.35);
+}
+
+.custom-select {
+  position: relative;
+  font-family: Arial, Helvetica, sans-serif;
+  margin-right: 30px;
+  background: linear-gradient(135deg, #fff1eb, #ace0f9);
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  padding: 10px 16px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+  transition: all 0.3s ease;
+}
+
+.custom-select:hover {
+  background: linear-gradient(135deg, #c1ffed, #fbc2eb);
+  border-color: #ff69b4;
+  transform: translateY(-1px);
+  box-shadow: 0 6px 18px rgba(255, 105, 180, 0.25);
+}
